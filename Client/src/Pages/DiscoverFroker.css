@@ -1,0 +1,48 @@
+/* Home.css */
+
+/* Container for the video */
+.container {
+    max-width: 100%; /* Ensure the container takes full width */
+    padding: 0 1rem; /* Add padding if needed */
+  }
+  
+  /* Video styling */
+  .video-display {
+    width: 100%; /* Make video full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it does not exceed the container width */
+    display: block; /* Ensure video is treated as a block element */
+  }
+
+/* Keyframes for slider animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Slider container styling */
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  width: 130%;
+  animation: slide 10s linear infinite;
+}
+
+
+.slider li {
+  flex-shrink: 0;
+  width: 25%; /* Adjust based on the number of slides */
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
