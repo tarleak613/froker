@@ -16,7 +16,7 @@ function BlogPage() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/posts/${id}`);
+        const response = await axios.get(`https://froker-4rgh.onrender.com/api/posts/${id}`);
         setPost(response.data);
         setLiked(response.data.likedByUser); // Assuming the response contains a flag for whether the user has liked the post
       } catch (error) {
@@ -30,7 +30,7 @@ function BlogPage() {
   const handleLike = async () => {
     try {
       // Update the like status in the backend
-      await axios.post(`http://localhost:5000/api/posts/${id}/like`, { liked: !liked });
+      await axios.post(`https://froker-4rgh.onrender.com/api/posts/${id}/like`, { liked: !liked });
 
       // Update the local state
       setPost(prevPost => ({

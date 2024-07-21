@@ -7,7 +7,7 @@ function IntroPost() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/posts'); // Update this URL to your API endpoint
+        const response = await axios.get('https://froker-4rgh.onrender.com/api/posts'); // Update this URL to your API endpoint
         setPosts(response.data);
       } catch (error) {
         console.error('Error fetching posts:', error);

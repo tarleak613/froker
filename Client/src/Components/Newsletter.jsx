@@ -11,7 +11,7 @@ function Newsletter() {
     e.preventDefault();
     
     try {
-      const response = await axios.post('http://localhost:5000/api/newsletter', { email });
+      const response = await axios.post('https://froker-4rgh.onrender.com/api/newsletter', { email });
       
       if (response.status === 200) {
         setMessage('Thank you for subscribing! You are now part of our community. Get ready to receive exciting updates, exclusive offers, and more directly to your inbox.');

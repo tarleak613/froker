@@ -14,7 +14,7 @@ function Blogs() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/posts');
+        const response = await axios.get('https://froker-4rgh.onrender.com/api/posts');
         const totalPosts = response.data.length;
         setPosts(response.data);
         setTotalPages(Math.ceil(totalPosts / postsPerPage));
